@@ -14,7 +14,8 @@ content = r.json()
 news = ""
 # Access the article titles and descriptions
 for article in content["articles"]:
-    news = news + article["title"] + "\n" + article["description"] + 2*"\n"
+    if article["title"] is not None:
+        news = news + article["title"] + "\n" + article["description"] + 2*"\n"
 
 news = news.encode("UTF-8")
 news_digest(news)
