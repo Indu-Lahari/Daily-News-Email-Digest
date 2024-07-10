@@ -15,7 +15,7 @@ news = ""
 # Access the article titles and descriptions
 for article in content["articles"]:
     if article["title"] is not None:
-        news = news + article["title"] + "\n" + article["description"] + 2*"\n"
+        news = news + article["title"] + "\n" + article["description"] + "\n" + article["url"] + 2*"\n"
 
 news = news.encode("UTF-8")
 news_digest(news)
