@@ -5,9 +5,9 @@ import ssl
 def news_digest(news):
     host = "smtp.gmail.com"
     port = 465
-    username = "indulahari6@gmail.com"
-    password = "qoeq lacl eays hetb"
-    receiver = "vamshivam123456@gmail.com"
+    username = "user_email"
+    password = "your_apppassword"
+    receiver = "receiver_email"
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(host, port, context=context) as server:
         server.login(username, password)
